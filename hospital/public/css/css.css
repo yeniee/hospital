@@ -1,0 +1,571 @@
+@charset "utf-8";
+
+*{margin:0; padding:0; box-sizing: border-box;}
+
+li{list-style:none;}
+a{text-decoration: none; color: #000;}
+
+
+/*all*/
+
+#wrap{
+	width:95%; 
+	height:auto; 
+	margin:0 auto; position: 
+	relative; 
+}
+.h2{
+	text-align: center; 
+	margin:20px 0;
+}
+/*mobile nav scetion*/
+.mobile-header-section{
+	width:100%; 
+	display: flex; 
+	align-items: center;
+}
+.mobile-header-left{
+	width:30%;  
+	height: 70px; 
+	display: flex; 
+	align-items: center;
+}
+
+.ham-nav{
+	width:50px; 
+	height: 50px; 
+	display: flex; 
+	flex-direction: column; 
+	align-items: center; 
+	justify-content: space-evenly; 
+	border:1px solid #000; 
+	cursor: pointer;
+}
+.ham{
+	width:30px; 
+	height: 5px; 
+	background: #000;
+}
+
+.mobile-nav{
+	width:100%; 
+	position: absolute; 
+	top:0; 
+	left:0; 
+	background:rgba(0,0,0,0.9); 
+	margin-left: -2000px; 
+	z-index: 200; 
+	transition: 0.5s;
+}
+.close-btn{
+	position: absolute; 
+	top:15px; 
+	right: 10%; 
+	color: #fff;
+	font-size:30px; 
+	cursor: pointer;
+}
+.mobile_nav_ul{
+	width:100%; 
+	height: 100vh; 
+	text-align: center;
+	margin-top:100px;;
+}
+.mobile_nav_ul>li{}
+.mobile_nav_ul>li:hover{
+	background: #2c43a3;
+}
+.mobile_nav_ul>li:hober.mobile-nav-li>a{}
+.mobile-nav-li{
+	padding:10px 0;
+}
+.mobile-nav-li>a{
+	font-size: 25px; 
+	color:#fff;
+}
+.mobile-sub-nav{
+	display:none;
+}
+.mobile-sub-nav>li{}
+.mobile-sub-li{
+	padding:5px 0;
+}
+.mobile-sub-li>a{
+	color:#fff;
+}
+.mobile-sub-li>a:hover{
+	color:#000; 
+	font-size: 18px;
+}
+.logo{}
+.logo img{
+	width: 200px;
+}
+
+
+
+
+/*pc ver menu*/
+
+.pc-header-section{
+	width:100%; 
+	display: none;
+}
+.pc-top-header{
+	width:100%;
+	display: flex; 
+	align-items: center;
+	justify-content: flex-start; 
+	background:#2c43a3;
+}
+
+.top-header-left-ul{
+	width: 50%; 
+	height:45px;
+	display: flex; 
+ 	align-items: center;  
+	justify-content: space-around;
+}
+.top-header-left-li{
+	display: flex;	
+}
+.top-header-left-li a{
+	display: inline-block;    
+    width: 100%;
+    margin: 0 5px;    
+    font-size: 13px;
+    color: #fff;
+}
+.top-header-left-li img{}
+
+.top-header-right{
+	width: 50%; 
+	height:45px;
+	display: flex; 
+	align-items: center; 
+	justify-content: end;
+}
+.top-header-right-ul{
+	width: 35%; 
+	display: flex; 
+	align-items: center; 
+	justify-content: space-around;
+}
+.top-header-right-li{}
+.top-header-right-li a{
+	display:flex;
+	color: #fff;
+	font-size: 14px;
+}
+.top-header-right-li img{
+	width: 30px;
+	height: 30px;
+}
+
+
+.main-header{
+	width:100%; 
+	text-align: center;
+}
+.gnb{
+	width:100%; 
+	background: #fff; 
+	position: relative; 
+	z-index: 10; 
+}
+.gnb-ul{
+	width: 100%;  
+	background: #fff;
+}
+.gnb-li{
+	width:20%; 
+	height: 50px; 
+	float: left; 
+	transition: 0.5s;
+}
+.gnb-li:hover{
+	background:#2c43a3; 
+}
+.gnb-li:hover.gnb-li>a{
+	color: #fff;
+}
+.gnb-li>a{
+	width:100%; 
+	height: 50px; 
+	display:flex; 
+	align-items: center; 
+	justify-content: center;
+	font-size: 25px; 
+	text-align: center;
+}
+
+.sub-ul{
+	width: 100%; 
+	text-align: center; 
+	background: #fff; 
+	display: none;
+}
+.sub-li{}
+.sub-li:hover{
+	background:#2c43a3;
+	transition: 0.5s;
+}
+.sub-li:hover.sub-li>a{
+	color: #fff;
+}
+.sub-li>a{
+	display:inline-block; 
+	width:100%; 
+	font-size: 20px; 
+	padding: 5px 0;
+}
+
+.slide-section{
+	width:100%; 
+	position: relative; 
+	overflow: hidden;
+}
+.slide-section-ul{
+	width:500%; 
+	display: flex;
+}
+.slide-section-li{
+	width:20%; 
+	position: relative;
+}
+.slide-section-li a{}
+.slide-section-li img{
+	width:100%;
+}
+
+
+.slide-text-wrap{
+	position: absolute; 
+	left:20px; color: #fff; 
+	transition: 0.5s;  
+}
+.slide-text-wrap-1{
+	top:20%;
+}
+.slide-text-wrap-2{
+	top:20%;
+}
+.slide-text-wrap-3{
+	top:15%;
+}
+.slide-text-wrap-4{
+	top:20%;
+}
+.slide-text-wrap-5{
+	top:5%;
+}
+
+.slide-p{} 
+.slide-p-1{}
+.slide-p-2{}
+.slide-p-3{}
+.slide-p-5{
+	font-size: 12px;
+}
+
+.slide-h2{margin:10px 0;}
+.slide-h2-1{}
+.slide-h2-2{}
+.slide-h2-3{
+	font-size: 16px;
+}
+.slide-h2-4{}
+.slide-h2-5{}
+
+
+
+.slide-text-wrap button{
+	border:none; 
+	outline: none; 
+	cursor: pointer; 
+	background: orange; 
+	color: #fff; 
+	padding: 5px;
+}
+
+.slide-text-wrap-5 button{
+	margin-top:5px;
+}
+/*mobild-medical-course section*/
+
+.mobild-medical-course{
+	width:90%;
+	margin: 50px auto;
+}
+.mobile-medical-ul{
+	width:100%; 
+	display: flex; 
+	align-items: center; 
+	justify-content: space-around; 	
+	flex-wrap:wrap;
+	text-align: center;
+}
+.mobile-medical-li{
+	width:25%; 
+	padding:3px 0; 
+	transition: 0.5s; 
+	font-size: 15px;
+}
+.mobile-medical-li:hover{
+	background: #2c43a3;
+}
+.mobile-medical-li:hover.mobile-medical-li>a{
+	color: #fff;
+}
+.mobile-medical-li a{
+	font-size: 14px;
+}
+
+
+/*special-medical*/
+
+.special-medical{
+	width: 100%;
+    overflow: hidden;
+}
+
+.special-medical-ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.special-medical-li{
+	width: 50%;
+}
+.special-medical-li img{
+	width:100%;
+	background: #b3bbc5;
+	/**/	
+}
+.special-medical-li img:hover{
+	background: #2c43a3;
+	transition:0.5s;
+	cursor: pointer;
+}
+
+/*pc ver special-medical*/
+.pc-special-medical{
+	width: 90%;
+	margin:0 auto; 
+	background:#333; 
+	display: none;
+}
+.pc-special-medical-ul{
+	width:100%; 
+	display: flex; 
+	align-items: center; 
+	justify-content: space-around;
+}
+.pc-special-medical-li{
+	width:25%; 
+	height:200px;
+}
+.child-1{
+	display:flex; 
+	align-items: flex-end; 
+	justify-content: space-around;
+}
+.pc-special-medical-li h2{
+	text-align: center; 
+	font-size: 50px; 
+	color: #fff;
+}
+.pc-special-medical-li img{
+	width:400px;
+}
+.hover-li{
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+	background: #aaa;
+}
+.hover-li:hover{
+	background: #b3bbc5;
+}
+
+/*hospital-infor*/
+
+.hospital-infor{
+	width:100%; 
+	position: relative;
+ } 
+.hospital-infor-glt{}
+.hospital-infor-lt{}
+.hospital-infor-gt{}
+
+.hospital-infor-icon-ul{
+	width:100%; 
+	display: flex; 
+	align-items: flex-start; 
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.hospital-infor-icon-li{
+	width:25%;  
+	text-align: center; 
+	padding: 10px; 
+	cursor: pointer;  
+}
+.hospital-infor-icon-li img{
+	background: #b3bbc5;
+}
+.hospital-infor-icon-li img:hover{
+	background: #2c43a3;
+	transition:0.5s;
+}
+
+.hospital-infor-icon-li h3{
+	font-size: 14px; 
+	white-space: nowrap;
+}
+
+/*footer section*/
+
+.mobile-footer-section{}
+.mobile-top-footer{}
+.mobile-footer-1{}
+.mobile-footer-1 ul{
+	display: flex; 
+	align-items: center; 
+	justify-content: space-around;
+}
+.mobile-footer-1 li{
+	padding:5px 0; 
+	font-size:12px;
+}
+.mobile-footer-1 li>a{}
+
+.mobile-footer-2{}
+.mobile-footer-2 ul{
+	display: flex; 
+	align-items: center; 
+	justify-content: space-around;
+}
+.mobile-footer-2 li{
+	padding:5px 0; 
+	font-size:12px;
+}
+.mobile-footer-2 li a{}
+
+.mobile-bottom-footer{
+	width:100%; 
+	text-align: center;
+	font-size: 13px;
+}
+.footer-tel-img{}
+.footer-tel-img img{}
+.ceo{}
+.footer-img{}
+.footer-img img{}
+
+@media screen and (min-width:800px) {
+
+/*mobile nav scetion*/
+
+.mobile-header-section{
+	display: none;
+}
+
+pc ver menu
+.pc-header-section{
+	display:block;
+}
+
+.slide-p{
+	font-size: 30px;
+} 
+
+
+.slide-h2{
+	font-size: 50px; 
+	font-weight: normal;
+}
+.slide-text-wrap button{
+	width:100px ;
+	height:70px; 
+	font-size: 25px;
+}
+
+/*mobild-medical-course section*/
+
+.mobild-medical-course{
+	display: flex; 
+	align-items: center; 
+	justify-content: space-around; 	
+}
+.h2{
+	font-size: 35px;
+}
+.mobile-medical-name{
+	width:70%;
+}
+.mobile-medical-li a{
+	font-size: 23px;
+}
+
+.special-medical{}
+
+.special-medical{
+	display: none;
+}
+
+.pc-special-medical{
+	display:block;
+}
+/*hospital-infor*/
+.hospital-infor-icon-ul{
+	flex-wrap: nowrap;
+}
+.hospital-infor{
+	display: flex; 
+	align-items: center;
+}
+.hospital-infor-icon-li h3{
+	font-size: 16px;
+}
+
+
+
+
+
+/*footer section*/
+
+.mobile-footer-section{}
+.mobile-top-footer{
+	display: flex; 
+	align-items: center; 
+	justify-content: space-between;
+}
+
+.mobile-footer-1 li{
+	font-size:18px;
+}
+.mobile-footer-1 li>a{
+	padding: 0 5px;
+	font-size: 15px;
+}
+
+
+.mobile-footer-2 li{ 
+	font-size:18px;
+}
+.mobile-footer-2 li a{
+	padding: 0 5px;
+	font-size: 15px;
+}
+
+.mobile-bottom-footer{
+	display: flex; 
+	align-items: center; 
+	justify-content: space-around;
+}
+
+
+
+}
