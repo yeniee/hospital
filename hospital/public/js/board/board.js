@@ -2,8 +2,6 @@
 
 let boardarray = [];
 
-
-
 $(function(){
 	/*ham nav script*/
 
@@ -28,8 +26,7 @@ $(function(){
 	})
 })
 
-function setboard(){
-	
+function setboard(){	
 	let board = {	
 		check : document.querySelector('input[name="check"]:checked').value, // 칭찬합니다 또는 불편합니다 체크		
 		btitle : document.querySelector(".btitle").value,						// 제목
@@ -78,7 +75,7 @@ function boardlist(){
 		
 	container += "<tr>"+
 					"<td class='td bno'>"+(i+1)+"</td>"+//번호
-					"<td class='td bitle'> <a href='javascript:void(0)' onclick='getboard("+i+")'>"+boardarray[i].btitle+"</a></td>"+//제목
+					"<td class='td bitle'> <a href='javascript:void(0)' onclick='getboard("+i+");count("+i+")'>"+boardarray[i].btitle+"</a></td>"+//제목
 					"<td class='td bname'>"+boardarray[i].bname+"</td>"+//이름
 					"<td class='td bcount'>"+boardarray[i].bview+"</td>"	//조회수			      		
 				"</tr>"; 	
@@ -145,23 +142,21 @@ function deletebtn(i){
 	}
 }
 
-/*
- 글작성을 할 때 
- 칭찬합니다
- 불편합니다
- 두개의 라디오버튼이 있음
- 
- 두개 중 하나만 체크할 수 있으며, 두개 다 체크는 되지 않는다 라디오버튼이라
- 
- 글을 출력 할 때 
- 만약에 칭찬이면 if() 문 사용
-  content-1번으로 출력
-  불편합니다 이면
-  content-2번으로 출력하기
-  
-  check를 찾아야 하는데 
-  array안에 있는 것들 중에 check의 값을 찾아야 한다.
-  
+titleclick();
+function titleclick(){
+	let titleclick = document.querySelector(".boardlist-viewtitle");
+	console.log(titleclick)
+}
 
- */
 
+function count(i){
+	//alert("나 클릭했니")
+	//console.log(boardarray)
+	//let check = boardarray[i].check;
+	//console.log("check확인 : " + check);
+	
+	let view= boardarray[i].bview;
+	console.log(boardarray[i].bview);
+	console.log(boardarray[i].bview+=1);
+	console.log(boardarray[i].bview);
+}
