@@ -33,7 +33,7 @@ function setboard(){
 		bname : document.querySelector(".bname").value,							// 이름
 		bcontent : document.querySelector(".bcontent").value,					// 내용
 		bpassword : document.querySelector(".bpassword").value,					// 비밀번호
-		bdate : new Date().toLocaleDateString(),														// 작성시간
+		bdate : new Date().toLocaleDateString(),								// 작성시간
 		bview : 0																// 조회수
 	}
 	console.log(board.check)
@@ -54,7 +54,7 @@ function setboard(){
 		alert("작성이 완료 되었습니다. 스크롤을 내려주세요.");
 		
 		boardarray.push(board);
-		boardlist();
+		boardlist();//글목록보기 함수실행		
 		//console.log(boardarray);		
 		document.querySelector(".btitle").value = "";	
 		document.querySelector(".bname").value = "";	
@@ -127,11 +127,43 @@ function getboard(i){
 	document.querySelector(".boardwrap").innerHTML = board;	
 }//getboard end
 
-function upatebtn(i){
-	alert("진행중입니다.");
+function upatebtn(i){//수정하기
+	console.log(boardarray[i]);
+	console.log(boardarray[i].check);
+	console.log(boardarray[i].btitle);	
+	console.log(boardarray[i].bname);
+	console.log(boardarray[i].bcontent);
+	console.log(boardarray[i].bpassword);
+	let updateboard = 		'<div class="getboard-wrap">'+
+			
+			'<div class="boardlist-section">'+
+				'<span class="boardlist-txt">제목</span>'+				
+				'<input type="text" class="input update-btitle" name="btitle" value='+boardarray[i].btitle+'>'+
+			'</div>'+
+						
+			'<div class="boardlist-section">'+
+				'<span class="boardlist-txt">이름</span>'+				
+				'<input type="text" class="input update-bname" name="bname" value='+boardarray[i].bname+'>'	+	
+			'</div>'+			
+									
+			'<div class="boardlist-section">'+
+				'<span class="boardlist-txt">내용</span>'+				
+				'<input type="text" class="input update-bcontent" name="bcontent" value='+boardarray[i].bcontent+'>'	+	
+			'</div>'+
+			
+			'<div class="boardlist-section">'+
+				'<span class="boardlist-txt">비밀번호</span>'+				
+				'<input type="password" class="input update-bpassword" name="bpassword" value='+boardarray[i].bpassword+'>'	+	
+			'</div>'+			
+			'<button type="button" onclick="upeateboard('+i+')">'+"수정하기"+'</button>'+
+		'</div>';
+		console.log(updateboard)
+		document.querySelector(".update-board").innerHTML = updateboard;
+	
+
 }
 
-function deletebtn(i){
+function deletebtn(i){ 삭제
 	let password = prompt('비밀번호를 입력하세요 : ')
 	console.log(password);
 	if(password==boardarray[i].bpassword){
@@ -142,21 +174,46 @@ function deletebtn(i){
 	}
 }
 
-titleclick();
-function titleclick(){
-	let titleclick = document.querySelector(".boardlist-viewtitle");
-	console.log(titleclick)
+
+function count(i){ // 조회수 카운트하기
+	alert("나눌렀니")
+	let view = boardarray[i].bview+=1;
+	console.log(view)
+
 }
 
-
-function count(i){
-	//alert("나 클릭했니")
-	//console.log(boardarray)
-	//let check = boardarray[i].check;
-	//console.log("check확인 : " + check);
+function upeateboard(i){
+	alert("수정이 완료되었습니다.")
+	console.log(boardarray)
 	
-	let view= boardarray[i].bview;
-	console.log(boardarray[i].bview);
-	console.log(boardarray[i].bview+=1);
-	console.log(boardarray[i].bview);
+	let up_btitle = document.querySelector(".update-btitle").value;
+	let up_bname = document.querySelector(".update-bname").value;
+	let up_bcontent = document.querySelector(".update-bcontent").value;
+	let up_bpassword = document.querySelector(".update-bpassword").value;
+	console.log(up_btitle)
+	console.log(up_bname)
+	console.log(up_bcontent)
+	console.log(up_bpassword)
+	
+	console.log("수정전 : "+boardarray[i].check);
+	console.log("수정전 : "+boardarray[i].btitle);
+	console.log("수정전 : "+boardarray[i].bname);
+	console.log("수정전 : "+boardarray[i].bcontent);
+	console.log("수정전 : "+boardarray[i].bpassword);
+	
+	boardarray[i].btitle = up_btitle
+	boardarray[i].bname = up_bname
+	boardarray[i].bcontent = up_bcontent	
+	boardarray[i].bpassword = up_bpassword
+	
+	console.log("수정후 : "+boardarray[i].btitle)
+	console.log("수정후 : "+boardarray[i].bname)
+	console.log("수정후 : "+boardarray[i].bcontent)
+	console.log("수정후 : "+boardarray[i].bpassword)
+	
+	
+	console.log(boardarray)
+	
+	
+	
 }
