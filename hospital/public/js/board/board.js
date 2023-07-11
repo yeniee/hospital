@@ -73,14 +73,26 @@ function boardlist(){
 		console.log(i);
 		console.log(boardarray);
 		console.log(boardarray[i]);
-		
-	container += "<tr>"+
-					"<td class='td bno'>"+(i+1)+"</td>"+//번호
-					"<td class='td bitle'> <a href='javascript:void(0)' onclick='getboard("+i+");count("+i+")'>"+boardarray[i].btitle+"</a></td>"+//제목
-					"<td class='td bname'>"+boardarray[i].bname+"</td>"+//이름
-					"<td class='td bcount'>"+boardarray[i].bview+"</td>"	//조회수			      		
-				"</tr>"; 	
-				console.log(container)
+	if(boardarray[i].check=='good'){//칭찬합니다에 체크가 되는 글
+		container += "<tr>"+
+						"<td class='td bno'>"+(i+1)+"</td>"+//번호
+						"<td class='td bitle'> <a href='javascript:void(0)' onclick='getboard("+i+");count("+i+")'>"+boardarray[i].btitle+"</a></td>"+//제목
+						"<td class='td bname'>"+boardarray[i].bname+"</td>"+//이름
+						"<td class='td bcount'>"+boardarray[i].bview+"</td>"	//조회수			      		
+					"</tr>"; 	
+					console.log(container)		
+	}//if end
+	else if(boardarray[i].check=='bad'){//불편합니다에 체크가 되는 글
+		container += "<tr>"+
+						"<td class='td bno'>"+(i+1)+"</td>"+//번호
+						"<td class='td bitle'> <a href='javascript:void(0)' onclick='getboard("+i+");count("+i+")'>"+boardarray[i].bname[0]+'** 님의 소리 입니다.'+"</a></td>"+//제목
+						"<td class='td bname'>"+boardarray[i].bname[0]+'**'+"</td>"+//이름
+						"<td class='td bcount'>"+boardarray[i].bview+"</td>"	//조회수			      		
+					"</tr>"; 	
+					console.log(container)			
+	}
+
+
 	}//for end
 	console.log(boardarray);
 	console.log(boardarray[0]);	
