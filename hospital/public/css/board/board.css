@@ -301,6 +301,7 @@ a{text-decoration: none; color: #000;}
 	padding: 15px 0;
 	background: #2c43a3;
 	color: #fff;
+	border: 1px solid #000;
 }
 .th1{	
 	width: 15%;
@@ -388,13 +389,29 @@ a{text-decoration: none; color: #000;}
     padding: 15px 10px;	
     margin: 0 20px;
 }
-.btn:hover{
+/* .btn:hover{
 	background: #fff;
 	color: #000;
 	transition:0.5s;
-}
+} */
 .updatebtn{}
 .deletebtn{}
+/*section-4*/
+.section-4{}
+.boardlist-section{}
+.boardlist-txt{}
+.update-btitle{}
+.update-bname{}
+.update-bcontent{
+	height: 280px;
+}
+.update-btn-section{
+	text-align: center;
+    margin: 30px 0;
+}
+.uupdatebtn{
+	width: 20%;
+}
 /*footer section*/
 .mobile-footer-section{}
 .mobile-top-footer{}
